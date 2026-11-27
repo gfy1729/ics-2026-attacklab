@@ -9,8 +9,7 @@ import sys
 # gets([rbp - 0x120])
 # -0x120 ~ -0xA0 : expression
 # -0xA0 ~ -0x20 : logMsg
-# -0x20 ~ -0x18 : len
-# -0x18 ~ -0x10 : pad
+# -0x20 ~ -0x1c : len
 
 # Apparently the key is to exploit the field `len` to copy the data somewhere beyond the canary
 # But before calling grade_eval, we must make sure rdi = 4. We can exploit __libc_csu_init again.
